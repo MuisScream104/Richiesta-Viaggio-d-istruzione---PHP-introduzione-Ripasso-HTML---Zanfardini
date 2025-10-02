@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles/styles.css">
+    <title>Modulo GET</title>
+</head>
+    <header>
+            <div class="logo">
+            <a href="https://www.itisrossi.edu.it/">
+                <img src="res/logo_rossi.png" alt="Logo">
+            </a>
+            </div>
+            <nav>
+                <a href="index.html">Indice</a>
+                <a href="moduloGet.html">Sei qui</a>
+                <a href="moduloPost.html">Modulo Post</a>
+            </nav>
+    </header>
+<body>
+    <main>
+            <article>
+                <div id="display_citta"></div>
+            </article>
+            <article>
+                <form class="container" action="stampa.php" method="post">
+
+                    <h2>Paragrafo 1</h2>
+
+                    <label for="docente">Docente richiedente: *</label>
+                    <input type="text" id="docente" name="docente" required>
+
+                    <label for="classe">Classe: *</label>
+                    <input type="text" id="classe" name="classe" required>
+
+                    <label for="num_part">Numero partecipanti: *</label>
+                    <input type="number" id="num_part" name="num_part" min="1" max="50" value="1" required>
+
+                    <label>Elenco partecipanti: *</label>
+                    <div id="table-container"></div>
+
+                    <label for="data">Data e ora: *</label>
+                    <input type="date" id="data" name="data" required>
+
+                    <label for="citta">Preferenze meta: *</label>
+                    <select id="citta" name="citta" required>
+                        <option value="">--Scegli una meta--</option>
+                        <option value="Praga">Praga</option>
+                        <option value="Andalusia">Andalusia</option>
+                        <option value="Barcellona">Barcellona</option>
+                        <option value="Berlino">Berlino</option>
+                        <option value="Parigi">Parigi</option>
+                    </select>
+
+                    <label>Preferenze mezzo: *</label>
+                    <div id="mezzi">
+                        <label><input type="checkbox" name="mezzo[]" value="Aereo"> Aereo</label><br>
+                        <label><input type="checkbox" name="mezzo[]" value="Treno"> Treno</label><br>
+                        <label><input type="checkbox" name="mezzo[]" value="Autobus"> Autobus</label><br>
+                        <label><input type="checkbox" name="mezzo[]" value="Crociera"> Crociera</label><br>
+                    </div>
+
+                    <h2>Paragrafo 2</h2>
+
+                    <label for="trattamento">Trattamento: *</label>
+                    <select id="trattamento" name="trattamento" required>
+                        <option value="">--Scegli il trattamento--</option>
+                        <option value="b_b">b&b</option>
+                        <option value="mezza_pensione">Mezza pensione</option>
+                        <option value="pensione_completa">Pensione completa</option>
+                    </select>
+
+                    <label for="quota_capite">Quota pro-capite: *</label>
+                    <input type="number" id="quota_capite" name="quota_capite" placeholder="0,00 €" step="0.01" required>
+
+                    <label for="mail_docente">Email del docente: *</label>
+                    <input type="email" id="mail_docente" name="mail_docente" required>
+
+                    <label for="note">Note:</label>
+                    <textarea id="note" name="note" placeholder="Note..."></textarea>
+
+                    <div class="submit_div">
+                        <input type="reset" id="cancella" value="Cancella Richiesta">
+                        <input type="submit" id="submit" value="Invia Richiesta">
+                    </div>
+
+                </form>
+            </article>
+        </main>
+    <footer class="footer">
+            <div class="footer-container">
+                <div class="footer-section">
+                <h3>Contatti</h3>
+                <p>Email: <a href="mailto:info@example.com">info@example.com</a></p>
+                <p>Telefono: <a href="tel:+5837603986">+39 351 978 4467</a></p>
+                </div>
+                <div class="footer-section">
+                <h3>Crediti</h3>
+                <p>Sito fatto da Zanfardini Liam</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>2025 ITIS A. ROSSI. .</p>
+            </div>
+        </footer>
+</body>
+</html>
